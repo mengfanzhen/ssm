@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mfz.function.testfunction.mapper.TestMapper" >
+  <sql id="Base_Column_List" >
+  	CONSUMER_ID,USER_NAME
+  </sql>
+  <select id="getUserList" parameterType="map" resultType="map">
+    select 
+    <include refid="Base_Column_List" />
+    from PUB_CONSUMER
+    where ORG_CODE = #{ORG_CODE}
+  </select>
+
+
+  <update id="updateRecord" parameterType="map" >
+    UPDATE PUB_CONSUMER
+    SET USER_NAME = #{USER_NAME}
+    WHERE CONSUMER_ID = '01316f80d0c8468d861447d093071107'
+
+  </update>
+</mapper>

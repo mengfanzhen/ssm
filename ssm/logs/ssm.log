@@ -1,0 +1,639 @@
+[INFO] [2016-11-22 10:52:00][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 10:52:00][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 10:52:00 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 10:52:00][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 10:52:01][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 10:52:01][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 911 ms
+[INFO] [2016-11-22 10:52:01][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 10:52:01][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 10:52:01 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 10:52:01][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 10:52:02][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 543 ms
+[INFO] [2016-11-22 10:55:52][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 10:52:01 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 10:55:52][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 10:52:00 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 10:55:54][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 10:55:54][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 10:55:54 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 10:55:54][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 10:55:54][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[ERROR] [2016-11-22 10:55:54][org.springframework.web.context.ContextLoader]Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 14; 元素类型为 "settings" 的内容必须匹配 "(setting)+"。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:684)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:4138)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:425)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1341)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1542)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1552)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1552)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1520)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 14; 元素类型为 "settings" 的内容必须匹配 "(setting)+"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:256)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.<init>(XMLConfigBuilder.java:75)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:358)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 23 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 14; 元素类型为 "settings" 的内容必须匹配 "(setting)+"。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleEndElement(XMLDTDValidator.java:1994)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.endElement(XMLDTDValidator.java:879)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1782)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2973)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:254)
+	... 29 more
+[INFO] [2016-11-22 10:56:07][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 10:56:08][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 10:56:08 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 10:56:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 10:56:08][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 10:56:08][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 836 ms
+[INFO] [2016-11-22 10:56:08][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 10:56:08][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 10:56:08 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 10:56:08][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 10:56:09][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 558 ms
+[INFO] [2016-11-22 11:01:49][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 10:56:08 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:01:49][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 10:56:08 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:01:51][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:01:51][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:01:51 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:01:51][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:01:51][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:01:52][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 511 ms
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:01:52][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:01:52 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:01:52][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:01:52][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 373 ms
+[INFO] [2016-11-22 11:02:12][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:01:52 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:02:12][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:01:51 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:02:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:02:13][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:02:13 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:02:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:02:13][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:02:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 470 ms
+[INFO] [2016-11-22 11:02:13][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:02:13][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:02:13 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:02:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:14][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 360 ms
+[INFO] [2016-11-22 11:02:37][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:02:13 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:02:37][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:02:13 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:02:44][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:02:44][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:02:44 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:02:44][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:02:44][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:02:44][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 781 ms
+[INFO] [2016-11-22 11:02:44][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:02:44][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:02:44 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:02:44][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:02:45][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 607 ms
+[INFO] [2016-11-22 11:07:25][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:02:44 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:07:25][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:02:44 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:07:26][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:07:26][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:07:26 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:07:27][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:07:27][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:07:27][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 553 ms
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:07:27][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:07:27 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:07:27][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:07:27][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 395 ms
+[INFO] [2016-11-22 11:07:57][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:07:27 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:07:57][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:07:26 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:07:59][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:07:59][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:07:59 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:07:59][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:07:59][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:07:59][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 646 ms
+[INFO] [2016-11-22 11:07:59][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:07:59][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:07:59 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:07:59][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:00][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 363 ms
+[INFO] [2016-11-22 11:08:10][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:07:59 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:08:10][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:07:59 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:08:11][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:08:11][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:08:11 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:08:11][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:08:11][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:08:11][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 649 ms
+[INFO] [2016-11-22 11:08:11][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:08:11][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:08:11 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:08:11][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:08:12][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 349 ms
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==>  Preparing: SELECT count(0) FROM PUB_CONSUMER WHERE ORG_CODE = ? 
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==> Parameters: 11610201(String)
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]<==      Total: 1
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList]==>  Preparing: select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = ? limit ?,? 
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList]==> Parameters: 11610201(String), 0(Integer), 5(Integer)
+[DEBUG] [2016-11-22 11:08:25][com.mfz.testfunction.service.TestMapper.getUserList]<==      Total: 5
+[INFO] [2016-11-22 11:24:22][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:08:11 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:22][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:08:11 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:24][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:24:24][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:24:24 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:24][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:24:24][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:24:25][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 991 ms
+[INFO] [2016-11-22 11:24:25][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:24:25][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:25 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:26][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 622 ms
+[INFO] [2016-11-22 11:24:36][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:25 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:36][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:24:24 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:36][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:24:36][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:24:36 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:36][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:24:37][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:24:37][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 596 ms
+[INFO] [2016-11-22 11:24:37][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:24:37][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:37 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:37][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:38][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 637 ms
+[INFO] [2016-11-22 11:24:48][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:37 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:48][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:24:36 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:49][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:24:49][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:24:49 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:24:49][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:24:49][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:24:50][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 626 ms
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:24:50][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:50 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:24:50][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:24:50][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 360 ms
+[INFO] [2016-11-22 11:25:00][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:24:50 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:00][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:24:49 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:01][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:25:01][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:25:01 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:01][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:25:01][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:25:02][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 624 ms
+[INFO] [2016-11-22 11:25:02][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:25:02][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:02 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:02][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:03][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 730 ms
+[INFO] [2016-11-22 11:25:13][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:02 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:13][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:25:01 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:25:13][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:25:13 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:25:13][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:25:14][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 507 ms
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:25:14][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:14 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:14][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:14][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 313 ms
+[INFO] [2016-11-22 11:25:24][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:14 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:24][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:25:13 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:25][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 11:25:26][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 11:25:26 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 11:25:26][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 11:25:26][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 11:25:26][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 733 ms
+[INFO] [2016-11-22 11:25:26][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 11:25:26][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:26 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 11:25:26][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 11:25:27][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 544 ms
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==>  Preparing: SELECT count(0) FROM PUB_CONSUMER WHERE ORG_CODE = ? 
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==> Parameters: 11610201(String)
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]<==      Total: 1
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList]==>  Preparing: select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = ? limit ?,? 
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList]==> Parameters: 11610201(String), 0(Integer), 5(Integer)
+[DEBUG] [2016-11-22 11:25:30][com.mfz.testfunction.service.TestMapper.getUserList]<==      Total: 5
+[INFO] [2016-11-22 15:00:55][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 11:25:26 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:00:55][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 11:25:26 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:00:58][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:00:59][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:00:59 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:00:59][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:00:59][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:00:59][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 867 ms
+[INFO] [2016-11-22 15:00:59][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:00:59][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:00:59 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:00:59][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:01:00][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 438 ms
+[INFO] [2016-11-22 15:01:10][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:00:59 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:01:10][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:00:59 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:01:11][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:01:11][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:01:11 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:01:11][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:01:11][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[ERROR] [2016-11-22 15:01:11][org.springframework.web.context.ContextLoader]Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 37; columnNumber: 14; 需要属性 "interceptor", 并且必须为元素类型 "plugin" 指定该属性。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:684)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:5118)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5634)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:145)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:4138)
+	at org.apache.catalina.loader.WebappLoader.backgroundProcess(WebappLoader.java:425)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1341)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1542)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1552)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1552)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1520)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 37; columnNumber: 14; 需要属性 "interceptor", 并且必须为元素类型 "plugin" 指定该属性。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:256)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:125)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.<init>(XMLConfigBuilder.java:75)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:358)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+	... 23 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 37; columnNumber: 14; 需要属性 "interceptor", 并且必须为元素类型 "plugin" 指定该属性。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:325)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.addDTDDefaultAttrsAndValidate(XMLDTDValidator.java:1171)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.handleStartElement(XMLDTDValidator.java:1917)
+	at com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator.startElement(XMLDTDValidator.java:742)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1363)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2786)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:347)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:254)
+	... 29 more
+[INFO] [2016-11-22 15:05:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:05:14][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:05:14 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:05:14][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:05:14][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:05:14][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 930 ms
+[INFO] [2016-11-22 15:05:14][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:05:14][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:05:14 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:05:14][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:05:15][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 565 ms
+[DEBUG] [2016-11-22 15:06:01][com.mfz.interceptor.SqlLogInterceptor]sql====select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = '11610201'
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==>  Preparing: SELECT count(0) FROM PUB_CONSUMER WHERE ORG_CODE = ? 
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==> Parameters: 11610201(String)
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]<==      Total: 1
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList]==>  Preparing: select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = ? limit ?,? 
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList]==> Parameters: 11610201(String), 0(Integer), 5(Integer)
+[DEBUG] [2016-11-22 15:06:01][com.mfz.testfunction.service.TestMapper.getUserList]<==      Total: 5
+[INFO] [2016-11-22 15:09:03][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:05:14 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:09:03][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:05:14 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:09:12][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:09:12][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:09:12 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:09:12][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:09:12][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:09:13][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 921 ms
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:09:13][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:09:13 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:09:13][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:13][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 681 ms
+[INFO] [2016-11-22 15:09:43][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:09:13 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:09:43][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:09:12 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:09:45][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:09:45][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:09:45 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:09:45][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:09:45][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:09:46][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 822 ms
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:09:46][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:09:46 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:09:46][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:09:46][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 537 ms
+[INFO] [2016-11-22 15:10:26][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:09:46 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:10:26][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:09:45 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:10:27][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:10:28][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:10:28 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:10:28][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:10:28][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:10:28][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 521 ms
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:10:28][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:10:28 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:10:28][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:10:28][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 382 ms
+[DEBUG] [2016-11-22 15:14:26][com.mfz.interceptor.SqlLogInterceptor]sql====select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = '11610201'
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==>  Preparing: SELECT count(0) FROM PUB_CONSUMER WHERE ORG_CODE = ? 
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]==> Parameters: 11610201(String)
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList_COUNT]<==      Total: 1
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList]==>  Preparing: select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = ? limit ?,? 
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList]==> Parameters: 11610201(String), 0(Integer), 5(Integer)
+[DEBUG] [2016-11-22 15:14:26][com.mfz.testfunction.service.TestMapper.getUserList]<==      Total: 5
+[INFO] [2016-11-22 15:17:29][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:10:28 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:17:29][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:10:28 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:17:30][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:17:30][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:17:30 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:17:30][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:17:30][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:17:31][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 628 ms
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:17:31][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:17:31 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:17:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:31][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 406 ms
+[INFO] [2016-11-22 15:17:51][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:17:31 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:17:51][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:17:30 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:17:52][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:17:52][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:17:52 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:17:52][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:17:52][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:17:53][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 688 ms
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:17:53][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:17:53 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:17:53][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:17:53][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 429 ms
+[INFO] [2016-11-22 15:18:03][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:17:53 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:18:03][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:17:52 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:18:04][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:18:04][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:18:04 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:18:05][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:18:05][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:18:05][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 890 ms
+[INFO] [2016-11-22 15:18:05][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:18:05][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:18:05 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:18:05][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:06][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 517 ms
+[INFO] [2016-11-22 15:18:16][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:18:05 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:18:16][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:18:04 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:18:17][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:18:17][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:18:17 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:18:17][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:18:18][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:18:18][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 651 ms
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:18:18][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:18:18 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:18:18][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:18:18][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 497 ms
+[INFO] [2016-11-22 15:19:08][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:18:18 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:19:08][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:18:17 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:19:10][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization started
+[INFO] [2016-11-22 15:19:10][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing Root WebApplicationContext: startup date [Tue Nov 22 15:19:10 CST 2016]; root of context hierarchy
+[INFO] [2016-11-22 15:19:10][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-11-22 15:19:10][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-11-22 15:19:11][org.springframework.web.context.ContextLoader]Root WebApplicationContext: initialization completed in 898 ms
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization started
+[INFO] [2016-11-22 15:19:11][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:19:11 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:19:11][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mvc.xml]
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes.*] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testRes/] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList.*] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/test/testPageGetList/] onto handler 'testController'
+[INFO] [2016-11-22 15:19:11][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'SpringMVC': initialization completed in 672 ms
+[INFO] [2016-11-22 15:19:31][org.springframework.web.context.support.XmlWebApplicationContext]Closing WebApplicationContext for namespace 'SpringMVC-servlet': startup date [Tue Nov 22 15:19:11 CST 2016]; parent: Root WebApplicationContext
+[INFO] [2016-11-22 15:19:31][org.springframework.web.context.support.XmlWebApplicationContext]Closing Root WebApplicationContext: startup date [Tue Nov 22 15:19:10 CST 2016]; root of context hierarchy
+[2016-11-22 15:28:07,930] DEBUG - sql====select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = '11610201'
+[2016-11-22 15:29:04,443] DEBUG - sql====select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = '11610201'
+[2016-11-22 15:44:02,377] DEBUG - ==>  Preparing: SELECT count(0) FROM PUB_CONSUMER WHERE ORG_CODE = ? 
+[2016-11-22 15:44:02,408] DEBUG - ==> Parameters: 11610201(String)
+[2016-11-22 15:44:02,429] TRACE - <==    Columns: count(0)
+[2016-11-22 15:44:02,429] TRACE - <==        Row: 173
+[2016-11-22 15:44:02,430] DEBUG - <==      Total: 1
+[2016-11-22 15:44:02,431] DEBUG - ==>  Preparing: select CONSUMER_ID,USER_NAME from PUB_CONSUMER where ORG_CODE = ? limit ?,? 
+[2016-11-22 15:44:02,431] DEBUG - ==> Parameters: 11610201(String), 0(Integer), 5(Integer)
+[2016-11-22 15:44:02,437] TRACE - <==    Columns: CONSUMER_ID, USER_NAME
+[2016-11-22 15:44:02,438] TRACE - <==        Row: 01316f80d0c8468d861447d093071107, 我问问
+[2016-11-22 15:44:02,439] TRACE - <==        Row: 01830827b055457eb06fa3c215fc302c, 未填写
+[2016-11-22 15:44:02,439] TRACE - <==        Row: 0200c18d5318415b8e8c997b7df47f0c, 我是小唐
+[2016-11-22 15:44:02,439] TRACE - <==        Row: 02d55a1deea24ac5b16dfa71c04423f7, 连
+[2016-11-22 15:44:02,439] TRACE - <==        Row: 03deebda121344cd863b98facaba14af, 11111111111111111111
+[2016-11-22 15:44:02,439] DEBUG - <==      Total: 5
